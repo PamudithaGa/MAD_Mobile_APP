@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'vendors.dart';
 import 'cart.dart';
 import 'profile.dart';
-import 'event.dart'; // Import the Event page
-import 'wedding.dart'; // Import the Wedding page
+import 'event.dart';
+import 'wedding.dart';
 
 class Home extends StatefulWidget {
   final VoidCallback toggleTheme;
@@ -78,7 +78,6 @@ class _HomeState extends State<Home> {
   }
 }
 
-// HomePage widget
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -92,7 +91,6 @@ class HomePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Featured Image or Carousel
           Container(
             margin: const EdgeInsets.all(16.0),
             height: isPortrait ? screenHeight * 0.20 : screenHeight * 0.15,
@@ -116,7 +114,6 @@ class HomePage extends StatelessWidget {
             ),
           ),
 
-          // Categories Section
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
             child: Text('We Planned', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
@@ -144,12 +141,10 @@ class HomePage extends StatelessWidget {
             ),
           ),
 
-          // Event Sections
           buildEventCard(context, 'lib/assets/images/guitor.jpg', 'Memories of 20\'s', 'LKR 2500.00', isPortrait),
           buildEventCard(context, 'lib/assets/images/dancer.jpg', 'Sl 2 World', 'LKR 2000.00', isPortrait),
           buildEventCard(context, 'lib/assets/images/pool.jpg', 'Saturday Dj Night', 'LKR 1500.00', isPortrait),
 
-          // Categories: For You and See More
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
@@ -173,7 +168,6 @@ class HomePage extends StatelessWidget {
             ),
           ),
 
-          // Contact Us Section
           buildContactSection(),
           buildSubscribeSection(),
         ],
@@ -311,7 +305,6 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// CategoryCard Widget
 class CategoryCard extends StatelessWidget {
   final String imagePath;
   final String title;

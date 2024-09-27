@@ -28,12 +28,11 @@ class Photographer extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Header Section with Full Width Image Background and Curved Corners
                 Container(
                   width: double.infinity,
                   height: screenWidth * 0.5,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)), // Curved bottom corners
+                    borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
                   ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
@@ -79,7 +78,6 @@ class Photographer extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                // Portfolio Section
                 Text(
                   'Portfolio',
                   style: TextStyle(
@@ -88,10 +86,9 @@ class Photographer extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 10),
-                _buildPortfolioGrid(), // Build portfolio grid here
+                _buildPortfolioGrid(),
                 const SizedBox(height: 20),
 
-                // Services Section with Icons and Enhanced Design
                 Text(
                   'Services Offered',
                   style: TextStyle(
@@ -103,8 +100,8 @@ class Photographer extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.grey[850] // Dark mode background
-                        : Colors.blueGrey[50], // Light mode background
+                        ? Colors.grey[850]
+                        : Colors.blueGrey[50],
                     borderRadius: BorderRadius.circular(12),
                     boxShadow: [
                       BoxShadow(
@@ -127,7 +124,6 @@ class Photographer extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                // Contact Section with Enhanced Design
                 Text(
                   'Contact Me',
                   style: TextStyle(
@@ -169,7 +165,6 @@ class Photographer extends StatelessWidget {
     );
   }
 
-  // Helper to build the portfolio grid
   Widget _buildPortfolioGrid() {
     return GridView.count(
       crossAxisCount: 2,
@@ -184,7 +179,6 @@ class Photographer extends StatelessWidget {
     );
   }
 
-  // Helper to build portfolio images
   Widget _buildPortfolioImage(String imagePath) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
@@ -196,7 +190,7 @@ class Photographer extends StatelessWidget {
             color: Colors.transparent,
             child: InkWell(
               onTap: () {
-                // Optionally, navigate to a detailed view of the image
+
               },
               child: Image.asset(
                 imagePath,

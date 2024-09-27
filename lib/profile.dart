@@ -15,7 +15,6 @@ class Profile extends StatelessWidget {
           builder: (context, orientation) {
             return ListView(
               children: [
-                // Profile Picture and Name
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -50,7 +49,6 @@ class Profile extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                // Personal Information
                 const Text(
                   'Personal Information',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -61,7 +59,6 @@ class Profile extends StatelessWidget {
                 _buildInfoRow('Address:', 'Padiwela, Padiwela, Sri Lanka', orientation),
                 const SizedBox(height: 20),
 
-                // Order History
                 const Text(
                   'Order History',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -71,7 +68,6 @@ class Profile extends StatelessWidget {
                 _buildOrderHistoryItem('Order #1235', 'Placed on: 2024-09-17', '\LKR 68,000.00', orientation),
                 const SizedBox(height: 20),
 
-                // Payment Methods
                 const Text(
                   'Payment Methods',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -81,7 +77,6 @@ class Profile extends StatelessWidget {
                 _buildPaymentMethod('Visa: pamu000@gmail.com', orientation),
                 const SizedBox(height: 20),
 
-                // Account Settings
                 const Text(
                   'Account Settings',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -89,7 +84,6 @@ class Profile extends StatelessWidget {
                 const SizedBox(height: 10),
                 ElevatedButton(
                   onPressed: () {
-                    // Navigate to change password page
                   },
                   child: const Text('Change Password'),
                 ),
@@ -97,7 +91,6 @@ class Profile extends StatelessWidget {
                 // Logout Button
                 ElevatedButton(
                   onPressed: () {
-                    // Implement logout functionality
                   },
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                   child: const Text('Logout'),

@@ -63,7 +63,6 @@ class Wedding extends StatelessWidget {
               ],
             ),
 
-            // About Section
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Row(
@@ -85,7 +84,6 @@ class Wedding extends StatelessWidget {
               ),
             ),
 
-            // Wedding Services Section
             Container(
               color: Colors.grey[200],
               padding: const EdgeInsets.all(20.0),
@@ -120,7 +118,6 @@ class Wedding extends StatelessWidget {
               ),
             ),
 
-            // Returned to Reality Section
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 40.0),
               child: Column(
@@ -143,7 +140,6 @@ class Wedding extends StatelessWidget {
               ),
             ),
 
-            // Couples Section with Enhanced Layout
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 20.0),
               child: Column(
@@ -173,7 +169,6 @@ class Wedding extends StatelessWidget {
     );
   }
 
-  // Helper to build couple cards (Image + Name)
   Widget _buildCoupleCard(String name, String imagePath, double screenWidth) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10.0),

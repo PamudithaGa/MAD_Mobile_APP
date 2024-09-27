@@ -10,7 +10,6 @@ class Event extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
-    // Check if the current theme is dark
     final isDarkTheme = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
@@ -19,13 +18,12 @@ class Event extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.pop(context); // Go back to the previous screen
+            Navigator.pop(context);
           },
         ),
       ),
       body: Stack(
         children: [
-          // Background Gradient (using theme colors)
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -56,14 +54,13 @@ class Event extends StatelessWidget {
                         ),
                       ],
                       image: const DecorationImage(
-                        image: AssetImage('lib/assets/images/guitor.jpg'), // Update to your image path
+                        image: AssetImage('lib/assets/images/guitor.jpg'),
                         fit: BoxFit.cover,
                       ),
                     ),
                   ),
                   const SizedBox(height: 30),
 
-                  // Event Details Container
                   Container(
                     width: screenWidth * 0.85,
                     padding: const EdgeInsets.all(25),
@@ -81,7 +78,6 @@ class Event extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        // Event Title
                         Text(
                           'Memories Of 20\'s',
                           style: TextStyle(
@@ -95,7 +91,6 @@ class Event extends StatelessWidget {
                         ),
                         const SizedBox(height: 15),
 
-                        // Event Info List
                         _buildEventInfo(
                           context,
                           icon: Icons.music_note_rounded,
@@ -129,7 +124,6 @@ class Event extends StatelessWidget {
 
                         const SizedBox(height: 20),
 
-                        // Button (Animated for interaction)
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(

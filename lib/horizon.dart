@@ -42,7 +42,6 @@ class MysticBlueHorizon extends StatelessWidget {
     );
   }
 
-  // Portrait Layout
   Widget _buildPortraitLayout(double screenWidth, bool isDarkMode) {
     return Column(
       children: [
@@ -66,7 +65,6 @@ class MysticBlueHorizon extends StatelessWidget {
     );
   }
 
-  // Landscape Layout
   Widget _buildLandscapeLayout(double screenWidth, bool isDarkMode) {
     return Row(
       children: [
@@ -96,7 +94,6 @@ class MysticBlueHorizon extends StatelessWidget {
     );
   }
 
-  // Details Section
   Widget _buildDetailsSection(double screenWidth, bool isDarkMode) {
     return Container(
       padding: const EdgeInsets.all(16),
@@ -165,7 +162,6 @@ class MysticBlueHorizon extends StatelessWidget {
     );
   }
 
-  // Helper Widget to build the details table
   Widget _buildDetailsTable(bool isDarkMode) {
     return DataTable(
       columns: const [
@@ -202,7 +198,6 @@ class MysticBlueHorizon extends StatelessWidget {
   }
 }
 
-// Placeholder for the HomePage to demonstrate navigation
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 

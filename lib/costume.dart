@@ -24,10 +24,10 @@ class DoubleBreastedSuit extends StatelessWidget {
         final double priceFontSize = isLandscape ? screenWidth * 0.045 : screenWidth * 0.05;
 
         return Scaffold(
-          backgroundColor: isDarkTheme ? const Color(0xFF121212) : const Color(0xFFFAFAFA), // Background color
+          backgroundColor: isDarkTheme ? const Color(0xFF121212) : const Color(0xFFFAFAFA),
           appBar: AppBar(
             title: const Text('Suit Details'), // App bar title
-            backgroundColor: isDarkTheme ? const Color(0xFF1E2A5E) : const Color(0xFF1E2A5E), // App bar color
+            backgroundColor: isDarkTheme ? const Color(0xFF1E2A5E) : const Color(0xFF1E2A5E),
             leading: IconButton(
               icon: const Icon(Icons.arrow_back),
               onPressed: () {
@@ -40,7 +40,7 @@ class DoubleBreastedSuit extends StatelessWidget {
               child: Container(
                 width: screenWidth * (isLandscape ? 0.75 : 0.85),
                 decoration: BoxDecoration(
-                  color: isDarkTheme ? const Color(0xFF1E1E1E) : Colors.white, // Card color
+                  color: isDarkTheme ? const Color(0xFF1E1E1E) : Colors.white,
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: const [
                     BoxShadow(
@@ -57,10 +57,10 @@ class DoubleBreastedSuit extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(12),
                       child: Image.asset(
-                        'lib/assets/images/DoubleBreasted5piecessuit.jpg', // Image path
+                        'lib/assets/images/DoubleBreasted5piecessuit.jpg',
                         fit: BoxFit.cover,
                         width: imageWidth,
-                        height: imageHeight, // Adjusted height for the image based on orientation
+                        height: imageHeight,
                       ),
                     ),
                     const SizedBox(height: 20),
@@ -76,7 +76,7 @@ class DoubleBreastedSuit extends StatelessWidget {
                             style: TextStyle(
                               fontSize: titleFontSize,
                               fontWeight: FontWeight.bold,
-                              color: isDarkTheme ? Colors.white : const Color(0xFF1E2A5E), // Title color
+                              color: isDarkTheme ? Colors.white : const Color(0xFF1E2A5E),
                             ),
                           ),
                           const SizedBox(height: 10),
@@ -84,20 +84,20 @@ class DoubleBreastedSuit extends StatelessWidget {
                             'This feature suit is the first in the NB 2016/17 grooms collection with sharp detail given to the navy jacket to blend well with a gray waistcoat to give the feel of a true gentleman of the court. The suit features a double breasted single button and comes as a 5 piece suit including the waistcoat and tie. Made with 100 percent Italian wool.',
                             style: TextStyle(
                               fontSize: descriptionFontSize,
-                              height: 1.5, // Adjust line height
-                              color: isDarkTheme ? Colors.white70 : Colors.black87, // Description color
+                              height: 1.5,
+                              color: isDarkTheme ? Colors.white70 : Colors.black87,
                             ),
                             textAlign: TextAlign.justify,
                           ),
                           const SizedBox(height: 20),
 
-                          // Price Section
+
                           Text(
                             'Price: Rs. 99,000',
                             style: TextStyle(
                               fontSize: priceFontSize,
                               fontWeight: FontWeight.bold,
-                              color: isDarkTheme ? Colors.white : Colors.black, // Price color
+                              color: isDarkTheme ? Colors.white : Colors.black,
                             ),
                           ),
                           const SizedBox(height: 20),
@@ -107,16 +107,15 @@ class DoubleBreastedSuit extends StatelessWidget {
                             width: double.infinity,
                             child: ElevatedButton(
                               onPressed: () {
-                                // Navigate to the desired page
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const HomePage(), // Update with your target page
+                                    builder: (context) => const HomePage(),
                                   ),
                                 );
                               },
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF1E2A5E), // Button color
+                                backgroundColor: const Color(0xFF1E2A5E),
                                 padding: const EdgeInsets.symmetric(vertical: 12),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30),

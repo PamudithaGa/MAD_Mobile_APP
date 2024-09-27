@@ -54,7 +54,6 @@ class Login extends StatelessWidget {
   }
 }
 
-// Logo widget
 class Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -68,7 +67,6 @@ class Logo extends StatelessWidget {
   }
 }
 
-// Widget for the AuthForm
 class AuthForm extends StatefulWidget {
   @override
   _AuthFormState createState() => _AuthFormState();
@@ -149,7 +147,6 @@ class _AuthFormState extends State<AuthForm> {
   }
 }
 
-// Widget for Custom TextFields with Shadow
 class CustomTextField extends StatelessWidget {
   final String labelText;
   final IconData prefixIcon;
@@ -200,7 +197,6 @@ class CustomTextField extends StatelessWidget {
   }
 }
 
-// Widget for AuthButton (Login/Signup button)
 class AuthButton extends StatelessWidget {
   final bool isSignup;
   final VoidCallback onPressed;

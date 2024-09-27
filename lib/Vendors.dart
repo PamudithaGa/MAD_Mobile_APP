@@ -52,7 +52,6 @@ class _VendorsState extends State<Vendors> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Horizontal Category List
                 Container(
                   width: double.infinity,
                   color: const Color(0xFF1E2A5E),
@@ -70,7 +69,6 @@ class _VendorsState extends State<Vendors> {
                   ),
                 ),
 
-                // Vendor Categories and Vendor List
                 VendorCategory(
                   categoryTitle: 'Jewelry',
                   vendorImages: [
@@ -94,7 +92,6 @@ class _VendorsState extends State<Vendors> {
                   ],
                 ),
 
-                // Photography Section
                 _buildPhotographySection(screenHeight, screenWidth, isLandscape),
 
                 VendorCategory(
@@ -106,7 +103,6 @@ class _VendorsState extends State<Vendors> {
                   ],
                 ),
 
-                // Catering Section
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10.0),
                   child: Container(
@@ -227,7 +223,6 @@ class _VendorsState extends State<Vendors> {
   }
 }
 
-// CategoryIcon Widget for horizontal categories
 class CategoryIcon extends StatelessWidget {
   final String iconPath;
   final String label;
@@ -256,7 +251,6 @@ class CategoryIcon extends StatelessWidget {
   }
 }
 
-// VendorCategory Widget for vendor sections
 class VendorCategory extends StatelessWidget {
   final String categoryTitle;
   final List<VendorItem> vendorImages;
@@ -294,7 +288,6 @@ class VendorCategory extends StatelessWidget {
   }
 }
 
-// VendorItem Widget for individual vendor cards
 class VendorItem extends StatelessWidget {
   final String imagePath;
   final String vendorName;
