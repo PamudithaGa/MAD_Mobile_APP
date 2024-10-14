@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'vendors.dart';
 import 'cart.dart';
 import 'profile.dart';
@@ -120,7 +121,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Container(
-            height: isPortrait ? screenHeight * 0.20 : screenHeight * 0.15,
+            height: isPortrait ? screenHeight * 0.20 : screenHeight * 0.25,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
@@ -157,7 +158,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: 20),
           Container(
-            height: isPortrait ? screenHeight * 0.20 : screenHeight * 0.15,
+            height: isPortrait ? screenHeight * 0.20 : screenHeight * 0.30,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [

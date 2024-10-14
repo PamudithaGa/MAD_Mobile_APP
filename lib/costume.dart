@@ -26,10 +26,12 @@ class DoubleBreastedSuit extends StatelessWidget {
         return Scaffold(
           backgroundColor: isDarkTheme ? const Color(0xFF121212) : const Color(0xFFFAFAFA),
           appBar: AppBar(
-            title: const Text('Suit Details'), // App bar title
+            title: const Text('Suit Details',
+                style:TextStyle(color: Colors.white)), // App bar title
             backgroundColor: isDarkTheme ? const Color(0xFF1E2A5E) : const Color(0xFF1E2A5E),
             leading: IconButton(
-              icon: const Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back,
+                color: Colors.white),
               onPressed: () {
                 Navigator.pop(context); // Navigate back to the previous page
               },

@@ -28,7 +28,6 @@ class _VendorsState extends State<Vendors> {
         Navigator.pushReplacementNamed(context, Home.id);
         break;
       case 1:
-      // Stay on Vendors page
         break;
       case 2:
         Navigator.pushReplacementNamed(context, Cart.id);
@@ -145,29 +144,78 @@ class _VendorsState extends State<Vendors> {
   }
 
   Widget _buildPhotographySection(double screenHeight, double screenWidth, bool isLandscape) {
-    return Column(
-      children: [
-        GestureDetector(
-          onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => const Photographer()));
-          },
-          child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/piyumal.jpg', 'Piyumal Sachintha Photography', isLandscape),
-        ),
-        GestureDetector(
-          onTap: () {
-            // Handle tap
-          },
-          child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/nadun.jpg', 'Nadun Lakmina Photography', isLandscape),
-        ),
-        GestureDetector(
-          onTap: () {
-            // Handle tap
-          },
-          child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/lahiru.jpg', 'Lahiru Theekshana Photography', isLandscape),
-        ),
-      ],
-    );
+    if (isLandscape) {
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Expanded(
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Photographer()));
+              },
+              child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/piyumal.jpg', 'Piyumal Sachintha Photography', isLandscape),
+            ),
+          ),
+          Expanded(
+            child: GestureDetector(
+              onTap: () {
+                // Handle tap
+              },
+              child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/nadun.jpg', 'Nadun Lakmina Photography', isLandscape),
+            ),
+          ),
+          Expanded(
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const Photographer()));
+              },
+              child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/lahiru.jpg', 'Lahiru Theekshana Photography', isLandscape),
+            ),
+          ),
+        ],
+      );
+    } else {
+      // Portrait mode: show as a column
+      return Column(
+        children: [
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const Photographer()));
+            },
+            child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/piyumal.jpg', 'Piyumal Sachintha Photography', isLandscape),
+          ),
+          GestureDetector(
+            onTap: () {
+              // Handle tap
+            },
+            child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/nadun.jpg', 'Nadun Lakmina Photography', isLandscape),
+          ),
+          GestureDetector(
+            onTap: () {
+              // Handle tap
+            },
+            child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/lahiru.jpg', 'Lahiru Theekshana Photography', isLandscape),
+          ),
+        ],
+      );
+    }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   Widget _buildPhotographyContainer(double screenHeight, double screenWidth, String imagePath, String name, bool isLandscape) {
     final double containerHeight = isLandscape ? screenHeight * 0.35 : screenHeight * 0.20;

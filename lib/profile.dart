@@ -91,10 +91,15 @@ class Profile extends StatelessWidget {
                 // Logout Button
                 ElevatedButton(
                   onPressed: () {
+                    // Add your logout logic here
                   },
-                  style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red, // Background color
+                    foregroundColor: Colors.white, // Text color
+                  ),
                   child: const Text('Logout'),
                 ),
+
               ],
             );
           },

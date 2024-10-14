@@ -11,9 +11,12 @@ class Photographer extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Photographer'),
+        title: const Text('Photographer',
+        style:TextStyle(color: Colors.white)
+        ),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back,
+          color: Colors.white,),
           onPressed: () {
             Navigator.pop(context); // Navigate back to the previous page
           },
