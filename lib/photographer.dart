@@ -11,12 +11,13 @@ class Photographer extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Photographer',
-        style:TextStyle(color: Colors.white)
-        ),
+        title:
+            const Text('Photographer', style: TextStyle(color: Colors.white)),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back,
-          color: Colors.white,),
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
           onPressed: () {
             Navigator.pop(context); // Navigate back to the previous page
           },
@@ -35,10 +36,12 @@ class Photographer extends StatelessWidget {
                   width: double.infinity,
                   height: screenWidth * 0.5,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
+                    borderRadius:
+                        BorderRadius.vertical(bottom: Radius.circular(30)),
                   ),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
+                    borderRadius:
+                        BorderRadius.vertical(bottom: Radius.circular(30)),
                     child: Stack(
                       alignment: Alignment.center,
                       children: [
@@ -80,7 +83,6 @@ class Photographer extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-
                 Text(
                   'Portfolio',
                   style: TextStyle(
@@ -91,7 +93,6 @@ class Photographer extends StatelessWidget {
                 const SizedBox(height: 10),
                 _buildPortfolioGrid(),
                 const SizedBox(height: 20),
-
                 Text(
                   'Services Offered',
                   style: TextStyle(
@@ -117,16 +118,19 @@ class Photographer extends StatelessWidget {
                   ),
                   child: Column(
                     children: const [
-                      _ServiceItem(icon: Icons.photo_camera, text: 'Wedding Photography'),
-                      _ServiceItem(icon: Icons.portrait, text: 'Portrait Photography'),
+                      _ServiceItem(
+                          icon: Icons.photo_camera,
+                          text: 'Wedding Photography'),
+                      _ServiceItem(
+                          icon: Icons.portrait, text: 'Portrait Photography'),
                       _ServiceItem(icon: Icons.event, text: 'Event Coverage'),
-                      _ServiceItem(icon: Icons.business, text: 'Corporate Events'),
+                      _ServiceItem(
+                          icon: Icons.business, text: 'Corporate Events'),
                       _ServiceItem(icon: Icons.edit, text: 'Photo Editing'),
                     ],
                   ),
                 ),
                 const SizedBox(height: 20),
-
                 Text(
                   'Contact Me',
                   style: TextStyle(
@@ -187,14 +191,13 @@ class Photographer extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(12),
-        child: Hero( // Add Hero widget for animation
+        child: Hero(
+          // Add Hero widget for animation
           tag: imagePath,
           child: Material(
             color: Colors.transparent,
             child: InkWell(
-              onTap: () {
-
-              },
+              onTap: () {},
               child: Image.asset(
                 imagePath,
                 fit: BoxFit.cover,
@@ -220,7 +223,8 @@ class _ServiceItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
       child: Row(
         children: [
-          Icon(icon, color: const Color(0xFF1E2A5E), size: 24), // Icon color and size
+          Icon(icon,
+              color: const Color(0xFF1E2A5E), size: 24), // Icon color and size
           const SizedBox(width: 10),
           Expanded(
             child: Text(

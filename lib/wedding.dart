@@ -31,7 +31,8 @@ class Wedding extends StatelessWidget {
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('lib/assets/images/pool.jpg'), // Update image path
+                      image: AssetImage(
+                          'lib/assets/images/pool.jpg'), // Update image path
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -71,8 +72,8 @@ class Wedding extends StatelessWidget {
                   Expanded(
                     child: Text(
                       'Pearl Princess Events offers personalized proposals, inspiration boards, floor plans, lighting, and seating charts. '
-                          'They handle the entire wedding preparation process, ensuring a seamless and memorable experience. '
-                          'Their staff is dedicated to making your special day unforgettable.',
+                      'They handle the entire wedding preparation process, ensuring a seamless and memorable experience. '
+                      'Their staff is dedicated to making your special day unforgettable.',
                       style: TextStyle(
                         fontSize: screenWidth * 0.04,
                         fontFamily: 'Josefin Slab',
@@ -100,15 +101,15 @@ class Wedding extends StatelessWidget {
                   const SizedBox(height: 20),
                   Text(
                     '• Ceremony & Reception Coordination\n'
-                        '• Rehearsal Dinner Coordination\n'
-                        '• Rentals & Vendor Coordination\n'
-                        '• Wedding Day Timeline\n'
-                        '• Floor Plan Design\n'
-                        '• Wedding Concept & Design\n'
-                        '• Budget Management\n'
-                        '• Security & Staffing\n'
-                        '• Tenting\n'
-                        '• Transportation & Parking',
+                    '• Rehearsal Dinner Coordination\n'
+                    '• Rentals & Vendor Coordination\n'
+                    '• Wedding Day Timeline\n'
+                    '• Floor Plan Design\n'
+                    '• Wedding Concept & Design\n'
+                    '• Budget Management\n'
+                    '• Security & Staffing\n'
+                    '• Tenting\n'
+                    '• Transportation & Parking',
                     style: TextStyle(
                       fontSize: screenWidth * 0.045,
                       fontFamily: 'Lateef',

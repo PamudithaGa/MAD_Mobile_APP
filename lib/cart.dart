@@ -6,9 +6,16 @@ class Cart extends StatelessWidget {
   static const String id = "Cart"; // Route name
 
   final List<CartItem> cartItems = const [
-    CartItem(image: 'lib/assets/images/guitor.jpg', title: 'Memories of 20\'s', price: 2500.00),
-    CartItem(image: 'lib/assets/images/dia.jpg', title: 'Jewelry', price: 69000.00),
-    CartItem(image: 'lib/assets/images/DoubleBreasted5piecessuit.jpg', title: 'Double Breasted 5 Pieces Suit', price: 120000.00),
+    CartItem(
+        image: 'lib/assets/images/guitor.jpg',
+        title: 'Memories of 20\'s',
+        price: 2500.00),
+    CartItem(
+        image: 'lib/assets/images/dia.jpg', title: 'Jewelry', price: 69000.00),
+    CartItem(
+        image: 'lib/assets/images/DoubleBreasted5piecessuit.jpg',
+        title: 'Double Breasted 5 Pieces Suit',
+        price: 120000.00),
   ];
 
   @override
@@ -41,7 +48,8 @@ class Cart extends StatelessWidget {
                   const SizedBox(height: 10),
                   _buildPromoCodeRow(orientation),
                   const SizedBox(height: 10),
-                  _buildPriceRow('Total Amount:', totalPrice, orientation, isTotal: true),
+                  _buildPriceRow('Total Amount:', totalPrice, orientation,
+                      isTotal: true),
                   const SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () {
@@ -62,13 +70,16 @@ class Cart extends StatelessWidget {
     );
   }
 
-  Widget _buildPriceRow(String title, double amount, Orientation orientation, {bool isTotal = false}) {
+  Widget _buildPriceRow(String title, double amount, Orientation orientation,
+      {bool isTotal = false}) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           title,
-          style: TextStyle(fontSize: 20, fontWeight: isTotal ? FontWeight.bold : FontWeight.normal),
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: isTotal ? FontWeight.bold : FontWeight.normal),
         ),
         Text(
           '\LKR ${amount.toStringAsFixed(2)}',
@@ -88,7 +99,9 @@ class Cart extends StatelessWidget {
         ),
         SizedBox(
           height: 30,
-          width: orientation == Orientation.landscape ? 200 : 100, // Adjust the width for landscape
+          width: orientation == Orientation.landscape
+              ? 200
+              : 100, // Adjust the width for landscape
           child: TextField(
             keyboardType: TextInputType.text,
             decoration: const InputDecoration(
@@ -109,14 +122,17 @@ class CartItem {
   final String title;
   final double price;
 
-  const CartItem({required this.image, required this.title, required this.price});
+  const CartItem(
+      {required this.image, required this.title, required this.price});
 }
 
 class CartItemWidget extends StatelessWidget {
   final CartItem cartItem;
   final VoidCallback onRemove;
 
-  const CartItemWidget({Key? key, required this.cartItem, required this.onRemove}) : super(key: key);
+  const CartItemWidget(
+      {Key? key, required this.cartItem, required this.onRemove})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -139,7 +155,8 @@ class CartItemWidget extends StatelessWidget {
                 children: [
                   Text(cartItem.title, style: const TextStyle(fontSize: 18)),
                   const SizedBox(height: 8),
-                  Text('\LKR ${cartItem.price.toStringAsFixed(2)}', style: const TextStyle(fontSize: 16)),
+                  Text('\LKR ${cartItem.price.toStringAsFixed(2)}',
+                      style: const TextStyle(fontSize: 16)),
                 ],
               ),
             ),

@@ -24,17 +24,20 @@ class Profile extends StatelessWidget {
                         Text(
                           "Pamuditha Gangana",
                           style: TextStyle(
-                            fontSize: orientation == Orientation.landscape ? 28 : 24,
+                            fontSize:
+                                orientation == Orientation.landscape ? 28 : 24,
                             color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         Row(
                           children: [
-                            Icon(Icons.star, color: Theme.of(context).primaryColor),
+                            Icon(Icons.star,
+                                color: Theme.of(context).primaryColor),
                             Text(
                               "5.0",
-                              style: TextStyle(color: Theme.of(context).primaryColor),
+                              style: TextStyle(
+                                  color: Theme.of(context).primaryColor),
                             ),
                           ],
                         ),
@@ -42,7 +45,8 @@ class Profile extends StatelessWidget {
                     ),
                     CircleAvatar(
                       backgroundColor: Theme.of(context).primaryColor,
-                      backgroundImage: const AssetImage('lib/assets/images/pamu.jpg'),
+                      backgroundImage:
+                          const AssetImage('lib/assets/images/pamu.jpg'),
                       radius: orientation == Orientation.landscape ? 40 : 30,
                     ),
                   ],
@@ -56,7 +60,8 @@ class Profile extends StatelessWidget {
                 const SizedBox(height: 10),
                 _buildInfoRow('Email:', 'pamu000@gmail.com', orientation),
                 _buildInfoRow('Phone:', '+94722644385', orientation),
-                _buildInfoRow('Address:', 'Padiwela, Padiwela, Sri Lanka', orientation),
+                _buildInfoRow(
+                    'Address:', 'Padiwela, Padiwela, Sri Lanka', orientation),
                 const SizedBox(height: 20),
 
                 const Text(
@@ -64,8 +69,10 @@ class Profile extends StatelessWidget {
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 10),
-                _buildOrderHistoryItem('Order #1234', 'Placed on: 2024-08-26', '\LKR 75,000.00', orientation),
-                _buildOrderHistoryItem('Order #1235', 'Placed on: 2024-09-17', '\LKR 68,000.00', orientation),
+                _buildOrderHistoryItem('Order #1234', 'Placed on: 2024-08-26',
+                    '\LKR 75,000.00', orientation),
+                _buildOrderHistoryItem('Order #1235', 'Placed on: 2024-09-17',
+                    '\LKR 68,000.00', orientation),
                 const SizedBox(height: 20),
 
                 const Text(
@@ -83,8 +90,7 @@ class Profile extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 ElevatedButton(
-                  onPressed: () {
-                  },
+                  onPressed: () {},
                   child: const Text('Change Password'),
                 ),
 
@@ -99,7 +105,6 @@ class Profile extends StatelessWidget {
                   ),
                   child: const Text('Logout'),
                 ),
-
               ],
             );
           },
@@ -116,24 +121,33 @@ class Profile extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextStyle(fontSize: orientation == Orientation.landscape ? 18 : 16),
+            style: TextStyle(
+                fontSize: orientation == Orientation.landscape ? 18 : 16),
           ),
           Text(
             value,
-            style: TextStyle(fontSize: orientation == Orientation.landscape ? 18 : 16),
+            style: TextStyle(
+                fontSize: orientation == Orientation.landscape ? 18 : 16),
           ),
         ],
       ),
     );
   }
 
-  Widget _buildOrderHistoryItem(String title, String date, String amount, Orientation orientation) {
+  Widget _buildOrderHistoryItem(
+      String title, String date, String amount, Orientation orientation) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.0),
       child: ListTile(
-        title: Text(title, style: TextStyle(fontSize: orientation == Orientation.landscape ? 18 : 16)),
-        subtitle: Text(date, style: TextStyle(fontSize: orientation == Orientation.landscape ? 16 : 14)),
-        trailing: Text(amount, style: TextStyle(fontSize: orientation == Orientation.landscape ? 16 : 14)),
+        title: Text(title,
+            style: TextStyle(
+                fontSize: orientation == Orientation.landscape ? 18 : 16)),
+        subtitle: Text(date,
+            style: TextStyle(
+                fontSize: orientation == Orientation.landscape ? 16 : 14)),
+        trailing: Text(amount,
+            style: TextStyle(
+                fontSize: orientation == Orientation.landscape ? 16 : 14)),
       ),
     );
   }
@@ -142,7 +156,9 @@ class Profile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.0),
       child: ListTile(
-        title: Text(method, style: TextStyle(fontSize: orientation == Orientation.landscape ? 18 : 16)),
+        title: Text(method,
+            style: TextStyle(
+                fontSize: orientation == Orientation.landscape ? 18 : 16)),
         onTap: () {
           // Navigate to edit payment method
         },

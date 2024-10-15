@@ -18,7 +18,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  ThemeMode _themeMode = ThemeMode.dark; // Default theme mode
+  ThemeMode _themeMode = ThemeMode.dark;
 
   void _toggleTheme() {
     setState(() {
@@ -40,6 +40,7 @@ class _MyAppState extends State<MyApp> {
           unselectedItemColor: Colors.grey,
         ),
       ),
+
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: const Color(0xFFFFA500),
@@ -49,6 +50,7 @@ class _MyAppState extends State<MyApp> {
           unselectedItemColor: Colors.grey,
         ),
       ),
+
       themeMode: _themeMode,
       initialRoute: Login.id,
       routes: {

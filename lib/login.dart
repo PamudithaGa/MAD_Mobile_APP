@@ -13,40 +13,41 @@ class Login extends StatelessWidget {
         child: LayoutBuilder(
           builder: (context, constraints) {
             bool isPortrait = constraints.maxWidth < constraints.maxHeight;
-
             return Container(
               color: Colors.black,
               child: isPortrait
                   ? Column(
-                children: [
-                  Logo(), // Logo at the top
-                  Expanded(
-                    child: Center(
-                      child: SingleChildScrollView(
-                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                        child: AuthForm(),
-                      ),
-                    ),
-                  ),
-                ],
-              )
+                      children: [
+                        Logo(),
+                        Expanded(
+                          child: Center(
+                            child: SingleChildScrollView(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20.0),
+                              child: AuthForm(),
+                            ),
+                          ),
+                        ),
+                      ],
+                    )
                   : Row(
-                children: [
-                  Expanded(
-                    child: Center(
-                      child: Logo(), // Logo on the left
+                      children: [
+                        Expanded(
+                          child: Center(
+                            child: Logo(), // Logo on the left
+                          ),
+                        ),
+                        Expanded(
+                          child: Center(
+                            child: SingleChildScrollView(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20.0),
+                              child: AuthForm(),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
-                  Expanded(
-                    child: Center(
-                      child: SingleChildScrollView(
-                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                        child: AuthForm(),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
             );
           },
         ),
@@ -142,7 +143,9 @@ class _AuthFormState extends State<AuthForm> {
         TextButton(
           onPressed: _toggleFormType,
           child: Text(
-            _isSignup ? 'Already have an account? Login' : 'Create a new account',
+            _isSignup
+                ? 'Already have an account? Login'
+                : 'Create a new account',
             style: const TextStyle(color: Colors.white, fontSize: 16),
           ),
         ),

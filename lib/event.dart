@@ -85,12 +85,13 @@ class Event extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             color: isDarkTheme
                                 ? Colors.white // Dark theme font color
-                                : Theme.of(context).colorScheme.secondary, // Light theme font color
+                                : Theme.of(context)
+                                    .colorScheme
+                                    .secondary, // Light theme font color
                             letterSpacing: 1.5,
                           ),
                         ),
                         const SizedBox(height: 15),
-
                         _buildEventInfo(
                           context,
                           icon: Icons.music_note_rounded,
@@ -114,21 +115,22 @@ class Event extends StatelessWidget {
                         _buildEventInfo(
                           context,
                           icon: Icons.people,
-                          text: 'BNS, Samitha, Athula, Sureni, Romesh, La Sinore',
+                          text:
+                              'BNS, Samitha, Athula, Sureni, Romesh, La Sinore',
                         ),
                         _buildEventInfo(
                           context,
                           icon: Icons.credit_card,
                           text: 'Online Tickets Only',
                         ),
-
                         const SizedBox(height: 20),
-
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Theme.of(context).colorScheme.secondary,
-                            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                            backgroundColor:
+                                Theme.of(context).colorScheme.secondary,
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 50, vertical: 15),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
                             ),
@@ -154,7 +156,8 @@ class Event extends StatelessWidget {
   }
 
   // Helper Widget to Build Event Info Items
-  Widget _buildEventInfo(BuildContext context, {
+  Widget _buildEventInfo(
+    BuildContext context, {
     required IconData icon,
     required String text,
   }) {
@@ -166,7 +169,9 @@ class Event extends StatelessWidget {
         children: [
           Icon(
             icon,
-            color: isDarkTheme ? Colors.white : Theme.of(context).colorScheme.secondary,
+            color: isDarkTheme
+                ? Colors.white
+                : Theme.of(context).colorScheme.secondary,
             size: 30,
           ),
           const SizedBox(width: 15),

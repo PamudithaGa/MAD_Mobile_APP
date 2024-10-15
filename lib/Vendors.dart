@@ -59,49 +59,80 @@ class _VendorsState extends State<Vendors> {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        CategoryIcon('lib/assets/images/horizanimg.jpg', 'Jewelry', isLandscape: isLandscape),
-                        CategoryIcon('lib/assets/images/66f2fb4bf0f12-DoubleBreasted5piecessuit.jpg', 'Costumes', isLandscape: isLandscape),
-                        CategoryIcon('lib/assets/images/camera.jpg', 'Imaging', isLandscape: isLandscape),
-                        CategoryIcon('lib/assets/images/vanue.jpg', 'Venues', isLandscape: isLandscape),
+                        CategoryIcon(
+                            'lib/assets/images/horizanimg.jpg', 'Jewelry',
+                            isLandscape: isLandscape),
+                        CategoryIcon(
+                            'lib/assets/images/66f2fb4bf0f12-DoubleBreasted5piecessuit.jpg',
+                            'Costumes',
+                            isLandscape: isLandscape),
+                        CategoryIcon('lib/assets/images/camera.jpg', 'Imaging',
+                            isLandscape: isLandscape),
+                        CategoryIcon('lib/assets/images/vanue.jpg', 'Venues',
+                            isLandscape: isLandscape),
                       ],
                     ),
                   ),
                 ),
-
                 VendorCategory(
                   categoryTitle: 'Jewelry',
                   vendorImages: [
-                    VendorItem('lib/assets/images/bracelet.jpg', 'Bracelet', isLandscape: isLandscape),
-                    VendorItem('lib/assets/images/BroadBangle.jpg', 'Broad Bangle', isLandscape: isLandscape),
-                    VendorItem('lib/assets/images/horizanimg.jpg', 'Horizon Ring', isLandscape: isLandscape),
-                    VendorItem('lib/assets/images/LockBangle.png', 'Lock Bangle', isLandscape: isLandscape),
-                    VendorItem('lib/assets/images/BridalNecklace.png', 'Bridal Necklace', isLandscape: isLandscape),
-                    VendorItem('lib/assets/images/tinyheart.jpg', 'Tiny Heart', isLandscape: isLandscape),
+                    VendorItem('lib/assets/images/bracelet.jpg', 'Bracelet',
+                        isLandscape: isLandscape),
+                    VendorItem(
+                        'lib/assets/images/BroadBangle.jpg', 'Broad Bangle',
+                        isLandscape: isLandscape),
+                    VendorItem(
+                        'lib/assets/images/horizanimg.jpg', 'Horizon Ring',
+                        isLandscape: isLandscape),
+                    VendorItem(
+                        'lib/assets/images/LockBangle.png', 'Lock Bangle',
+                        isLandscape: isLandscape),
+                    VendorItem('lib/assets/images/BridalNecklace.png',
+                        'Bridal Necklace',
+                        isLandscape: isLandscape),
+                    VendorItem('lib/assets/images/tinyheart.jpg', 'Tiny Heart',
+                        isLandscape: isLandscape),
                   ],
                 ),
-
                 VendorCategory(
                   categoryTitle: 'Costumes',
                   vendorImages: [
-                    VendorItem('lib/assets/images/66f2fb4bf0f12-DoubleBreasted5piecessuit.jpg', 'DB Suit', isLandscape: isLandscape),
-                    VendorItem('lib/assets/images/SingleBreasted4PiecesSuit4.jpg', 'SB Suit', isLandscape: isLandscape),
-                    VendorItem('lib/assets/images/EnchantressWeddingDress2.jpg', 'Enchantress...', isLandscape: isLandscape),
-                    VendorItem('lib/assets/images/StrychineCutWeddingDress3.jpg', 'Strychnine...', isLandscape: isLandscape),
-                    VendorItem('lib/assets/images/HighNeckRollingCollar5piecessuit2.jpg', 'High Neck Suit', isLandscape: isLandscape),
+                    VendorItem(
+                        'lib/assets/images/66f2fb4bf0f12-DoubleBreasted5piecessuit.jpg',
+                        'DB Suit',
+                        isLandscape: isLandscape),
+                    VendorItem(
+                        'lib/assets/images/SingleBreasted4PiecesSuit4.jpg',
+                        'SB Suit',
+                        isLandscape: isLandscape),
+                    VendorItem('lib/assets/images/EnchantressWeddingDress2.jpg',
+                        'Enchantress...',
+                        isLandscape: isLandscape),
+                    VendorItem(
+                        'lib/assets/images/StrychineCutWeddingDress3.jpg',
+                        'Strychnine...',
+                        isLandscape: isLandscape),
+                    VendorItem(
+                        'lib/assets/images/HighNeckRollingCollar5piecessuit2.jpg',
+                        'High Neck Suit',
+                        isLandscape: isLandscape),
                   ],
                 ),
-
-                _buildPhotographySection(screenHeight, screenWidth, isLandscape),
-
+                _buildPhotographySection(
+                    screenHeight, screenWidth, isLandscape),
                 VendorCategory(
                   categoryTitle: 'Floras',
                   vendorImages: [
-                    VendorItem('lib/assets/images/akalanka.jpg', 'Alankara Flora', isLandscape: isLandscape),
-                    VendorItem('lib/assets/images/lassana.jpg', 'Lassan Flora', isLandscape: isLandscape),
-                    VendorItem('lib/assets/images/goldern.jpg', 'Golden Flora', isLandscape: isLandscape),
+                    VendorItem(
+                        'lib/assets/images/akalanka.jpg', 'Alankara Flora',
+                        isLandscape: isLandscape),
+                    VendorItem('lib/assets/images/lassana.jpg', 'Lassan Flora',
+                        isLandscape: isLandscape),
+                    VendorItem('lib/assets/images/goldern.jpg', 'Golden Flora',
+                        isLandscape: isLandscape),
                   ],
                 ),
-
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10.0),
                   child: Container(
@@ -122,12 +153,16 @@ class _VendorsState extends State<Vendors> {
                           children: [
                             TextButton(
                               onPressed: () {},
-                              child: const Text('Menu', style: TextStyle(fontSize: 16, color: Colors.blue)),
+                              child: const Text('Menu',
+                                  style: TextStyle(
+                                      fontSize: 16, color: Colors.blue)),
                             ),
                             const SizedBox(width: 18),
                             TextButton(
                               onPressed: () {},
-                              child: const Text('Book', style: TextStyle(fontSize: 16, color: Colors.blue)),
+                              child: const Text('Book',
+                                  style: TextStyle(
+                                      fontSize: 16, color: Colors.blue)),
                             ),
                           ],
                         ),
@@ -143,7 +178,8 @@ class _VendorsState extends State<Vendors> {
     );
   }
 
-  Widget _buildPhotographySection(double screenHeight, double screenWidth, bool isLandscape) {
+  Widget _buildPhotographySection(
+      double screenHeight, double screenWidth, bool isLandscape) {
     if (isLandscape) {
       return Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -151,9 +187,17 @@ class _VendorsState extends State<Vendors> {
           Expanded(
             child: GestureDetector(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Photographer()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const Photographer()));
               },
-              child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/piyumal.jpg', 'Piyumal Sachintha Photography', isLandscape),
+              child: _buildPhotographyContainer(
+                  screenHeight,
+                  screenWidth,
+                  'lib/assets/images/piyumal.jpg',
+                  'Piyumal Sachintha Photography',
+                  isLandscape),
             ),
           ),
           Expanded(
@@ -161,15 +205,28 @@ class _VendorsState extends State<Vendors> {
               onTap: () {
                 // Handle tap
               },
-              child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/nadun.jpg', 'Nadun Lakmina Photography', isLandscape),
+              child: _buildPhotographyContainer(
+                  screenHeight,
+                  screenWidth,
+                  'lib/assets/images/nadun.jpg',
+                  'Nadun Lakmina Photography',
+                  isLandscape),
             ),
           ),
           Expanded(
             child: GestureDetector(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const Photographer()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const Photographer()));
               },
-              child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/lahiru.jpg', 'Lahiru Theekshana Photography', isLandscape),
+              child: _buildPhotographyContainer(
+                  screenHeight,
+                  screenWidth,
+                  'lib/assets/images/lahiru.jpg',
+                  'Lahiru Theekshana Photography',
+                  isLandscape),
             ),
           ),
         ],
@@ -180,46 +237,51 @@ class _VendorsState extends State<Vendors> {
         children: [
           GestureDetector(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const Photographer()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const Photographer()));
             },
-            child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/piyumal.jpg', 'Piyumal Sachintha Photography', isLandscape),
+            child: _buildPhotographyContainer(
+                screenHeight,
+                screenWidth,
+                'lib/assets/images/piyumal.jpg',
+                'Piyumal Sachintha Photography',
+                isLandscape),
           ),
           GestureDetector(
             onTap: () {
               // Handle tap
             },
-            child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/nadun.jpg', 'Nadun Lakmina Photography', isLandscape),
+            child: _buildPhotographyContainer(
+                screenHeight,
+                screenWidth,
+                'lib/assets/images/nadun.jpg',
+                'Nadun Lakmina Photography',
+                isLandscape),
           ),
           GestureDetector(
             onTap: () {
               // Handle tap
             },
-            child: _buildPhotographyContainer(screenHeight, screenWidth, 'lib/assets/images/lahiru.jpg', 'Lahiru Theekshana Photography', isLandscape),
+            child: _buildPhotographyContainer(
+                screenHeight,
+                screenWidth,
+                'lib/assets/images/lahiru.jpg',
+                'Lahiru Theekshana Photography',
+                isLandscape),
           ),
         ],
       );
     }
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  Widget _buildPhotographyContainer(double screenHeight, double screenWidth, String imagePath, String name, bool isLandscape) {
-    final double containerHeight = isLandscape ? screenHeight * 0.35 : screenHeight * 0.20;
-    final double containerWidth = isLandscape ? screenWidth * 0.5 : screenWidth * 0.9;
+  Widget _buildPhotographyContainer(double screenHeight, double screenWidth,
+      String imagePath, String name, bool isLandscape) {
+    final double containerHeight =
+        isLandscape ? screenHeight * 0.35 : screenHeight * 0.20;
+    final double containerWidth =
+        isLandscape ? screenWidth * 0.5 : screenWidth * 0.9;
 
     return Container(
       margin: const EdgeInsets.all(16.0),
@@ -292,7 +354,8 @@ class CategoryIcon extends StatelessWidget {
             backgroundImage: AssetImage(iconPath),
           ),
           const SizedBox(height: 10),
-          Text(label, style: TextStyle(color: Colors.white, fontSize: fontSize)),
+          Text(label,
+              style: TextStyle(color: Colors.white, fontSize: fontSize)),
         ],
       ),
     );
@@ -303,7 +366,8 @@ class VendorCategory extends StatelessWidget {
   final String categoryTitle;
   final List<VendorItem> vendorImages;
 
-  const VendorCategory({required this.categoryTitle, required this.vendorImages});
+  const VendorCategory(
+      {required this.categoryTitle, required this.vendorImages});
 
   @override
   Widget build(BuildContext context) {
@@ -355,12 +419,14 @@ class VendorItem extends StatelessWidget {
           if (vendorName == 'Horizon Ring') {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const MysticBlueHorizon()),
+              MaterialPageRoute(
+                  builder: (context) => const MysticBlueHorizon()),
             );
           } else if (vendorName == 'DB Suit') {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const DoubleBreastedSuit()),
+              MaterialPageRoute(
+                  builder: (context) => const DoubleBreastedSuit()),
             );
           }
         },

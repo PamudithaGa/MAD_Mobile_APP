@@ -16,22 +16,28 @@ class DoubleBreastedSuit extends StatelessWidget {
         final isDarkTheme = Theme.of(context).brightness == Brightness.dark;
 
         // Adjust dimensions based on orientation
-        final double imageHeight = isLandscape ? screenHeight * 0.45 : screenHeight * 0.35;
-        final double imageWidth = isLandscape ? screenWidth * 0.9 : double.infinity;
+        final double imageHeight =
+            isLandscape ? screenHeight * 0.45 : screenHeight * 0.35;
+        final double imageWidth =
+            isLandscape ? screenWidth * 0.9 : double.infinity;
         final double paddingSize = isLandscape ? 24 : 16;
-        final double titleFontSize = isLandscape ? screenWidth * 0.05 : screenWidth * 0.065;
-        final double descriptionFontSize = isLandscape ? screenWidth * 0.035 : screenWidth * 0.04;
-        final double priceFontSize = isLandscape ? screenWidth * 0.045 : screenWidth * 0.05;
+        final double titleFontSize =
+            isLandscape ? screenWidth * 0.05 : screenWidth * 0.065;
+        final double descriptionFontSize =
+            isLandscape ? screenWidth * 0.035 : screenWidth * 0.04;
+        final double priceFontSize =
+            isLandscape ? screenWidth * 0.045 : screenWidth * 0.05;
 
         return Scaffold(
-          backgroundColor: isDarkTheme ? const Color(0xFF121212) : const Color(0xFFFAFAFA),
+          backgroundColor:
+              isDarkTheme ? const Color(0xFF121212) : const Color(0xFFFAFAFA),
           appBar: AppBar(
             title: const Text('Suit Details',
-                style:TextStyle(color: Colors.white)), // App bar title
-            backgroundColor: isDarkTheme ? const Color(0xFF1E2A5E) : const Color(0xFF1E2A5E),
+                style: TextStyle(color: Colors.white)), // App bar title
+            backgroundColor:
+                isDarkTheme ? const Color(0xFF1E2A5E) : const Color(0xFF1E2A5E),
             leading: IconButton(
-              icon: const Icon(Icons.arrow_back,
-                color: Colors.white),
+              icon: const Icon(Icons.arrow_back, color: Colors.white),
               onPressed: () {
                 Navigator.pop(context); // Navigate back to the previous page
               },
@@ -78,7 +84,9 @@ class DoubleBreastedSuit extends StatelessWidget {
                             style: TextStyle(
                               fontSize: titleFontSize,
                               fontWeight: FontWeight.bold,
-                              color: isDarkTheme ? Colors.white : const Color(0xFF1E2A5E),
+                              color: isDarkTheme
+                                  ? Colors.white
+                                  : const Color(0xFF1E2A5E),
                             ),
                           ),
                           const SizedBox(height: 10),
@@ -87,12 +95,12 @@ class DoubleBreastedSuit extends StatelessWidget {
                             style: TextStyle(
                               fontSize: descriptionFontSize,
                               height: 1.5,
-                              color: isDarkTheme ? Colors.white70 : Colors.black87,
+                              color:
+                                  isDarkTheme ? Colors.white70 : Colors.black87,
                             ),
                             textAlign: TextAlign.justify,
                           ),
                           const SizedBox(height: 20),
-
 
                           Text(
                             'Price: Rs. 99,000',
@@ -118,7 +126,8 @@ class DoubleBreastedSuit extends StatelessWidget {
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: const Color(0xFF1E2A5E),
-                                padding: const EdgeInsets.symmetric(vertical: 12),
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 12),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30),
                                 ),

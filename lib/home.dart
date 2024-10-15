@@ -48,10 +48,10 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: _isSearching
             ? TextField(
-          controller: _searchController,
-          autofocus: true,
-          decoration: const InputDecoration(hintText: 'Search...'),
-        )
+                controller: _searchController,
+                autofocus: true,
+                decoration: const InputDecoration(hintText: 'Search...'),
+              )
             : const Text('Pearl Princess'),
         actions: [
           IconButton(
@@ -70,9 +70,12 @@ class _HomeState extends State<Home> {
         onTap: _onTabTapped,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.sell_rounded), label: 'Vendors'),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Cart'),
-          BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: 'Account'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.sell_rounded), label: 'Vendors'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart), label: 'Cart'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle), label: 'Account'),
         ],
       ),
     );
@@ -86,7 +89,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
-    final isPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
+    final isPortrait =
+        MediaQuery.of(context).orientation == Orientation.portrait;
 
     return SingleChildScrollView(
       child: Column(
@@ -114,10 +118,10 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
-            child: Text('We Planned', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+            child: Text('We Planned',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
           ),
           SizedBox(height: 10),
           Container(
@@ -129,29 +133,39 @@ class HomePage extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Wedding()), // Navigate to Wedding page
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const Wedding()), // Navigate to Wedding page
                     );
                   },
-                  child: CategoryCard('lib/assets/images/wedding.jpg', 'Weddings', screenWidth),
+                  child: CategoryCard(
+                      'lib/assets/images/wedding.jpg', 'Weddings', screenWidth),
                 ),
-                CategoryCard('lib/assets/images/aluthkalawak.jpg', 'Concerts', screenWidth),
-                CategoryCard('lib/assets/images/service.jpg', 'Social Gathering', screenWidth),
-                CategoryCard('lib/assets/images/copoeve.jpg', 'Corporate Events', screenWidth),
-                CategoryCard('lib/assets/images/workshop.jpg', 'Workshops', screenWidth),
+                CategoryCard('lib/assets/images/aluthkalawak.jpg', 'Concerts',
+                    screenWidth),
+                CategoryCard('lib/assets/images/service.jpg',
+                    'Social Gathering', screenWidth),
+                CategoryCard('lib/assets/images/copoeve.jpg',
+                    'Corporate Events', screenWidth),
+                CategoryCard(
+                    'lib/assets/images/workshop.jpg', 'Workshops', screenWidth),
               ],
             ),
           ),
-
-          buildEventCard(context, 'lib/assets/images/guitor.jpg', 'Memories of 20\'s', 'LKR 2500.00', isPortrait),
-          buildEventCard(context, 'lib/assets/images/dancer.jpg', 'Sl 2 World', 'LKR 2000.00', isPortrait),
-          buildEventCard(context, 'lib/assets/images/pool.jpg', 'Saturday Dj Night', 'LKR 1500.00', isPortrait),
-
+          buildEventCard(context, 'lib/assets/images/guitor.jpg',
+              'Memories of 20\'s', 'LKR 2500.00', isPortrait),
+          buildEventCard(context, 'lib/assets/images/dancer.jpg', 'Sl 2 World',
+              'LKR 2000.00', isPortrait),
+          buildEventCard(context, 'lib/assets/images/pool.jpg',
+              'Saturday Dj Night', 'LKR 1500.00', isPortrait),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('For You', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                Text('For You',
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                 Text('See More', style: TextStyle(color: Colors.blue)),
               ],
             ),
@@ -162,13 +176,15 @@ class HomePage extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                CategoryCard('lib/assets/images/dress.jpg', 'Costumes', screenWidth),
-                CategoryCard('lib/assets/images/dia.jpg', 'Jewelry', screenWidth),
-                CategoryCard('lib/assets/images/cakes.jpg', 'Cakes', screenWidth),
+                CategoryCard(
+                    'lib/assets/images/dress.jpg', 'Costumes', screenWidth),
+                CategoryCard(
+                    'lib/assets/images/dia.jpg', 'Jewelry', screenWidth),
+                CategoryCard(
+                    'lib/assets/images/cakes.jpg', 'Cakes', screenWidth),
               ],
             ),
           ),
-
           buildContactSection(),
           buildSubscribeSection(),
         ],
@@ -176,7 +192,8 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget buildEventCard(BuildContext context, String imagePath, String title, String price, bool isPortrait) {
+  Widget buildEventCard(BuildContext context, String imagePath, String title,
+      String price, bool isPortrait) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -267,7 +284,8 @@ class HomePage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {},
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
+              style:
+                  ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
               child: const Text('Contact Us'),
             ),
           ],
@@ -296,7 +314,8 @@ class HomePage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {},
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
+              style:
+                  ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent),
               child: const Text('Subscribe'),
             ),
           ],
@@ -311,7 +330,8 @@ class CategoryCard extends StatelessWidget {
   final String title;
   final double width;
 
-  const CategoryCard(this.imagePath, this.title, this.width, {Key? key}) : super(key: key);
+  const CategoryCard(this.imagePath, this.title, this.width, {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
