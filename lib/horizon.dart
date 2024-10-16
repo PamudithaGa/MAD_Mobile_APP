@@ -55,7 +55,7 @@ class MysticBlueHorizon extends StatelessWidget {
             child: Image.asset(
               'lib/assets/images/horizanimg.jpg',
               fit: BoxFit.cover,
-              height: screenWidth * 0.5, // Maintain aspect ratio
+              height: screenWidth * 1, // Maintain aspect ratio
             ),
           ),
         ),
