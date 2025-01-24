@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'auth_service.dart';
 import 'home.dart';
 
 class Login extends StatelessWidget {
@@ -92,16 +93,31 @@ class _AuthFormState extends State<AuthForm> {
     });
   }
 
-  void _submit() {
-    String email = _emailController.text.trim();
-    String password = _passwordController.text.trim();
+void _submit() async {
+  String email = _emailController.text.trim();
+  String password = _passwordController.text.trim();
 
-    if (email.isEmpty || password.isEmpty) {
-      _showSnackBar('Please enter your email and password');
+  if (email.isEmpty || password.isEmpty) {
+    _showSnackBar('Please enter your email and password');
+    return;
+  }
+
+  try {
+    if (_isSignup) {
+      // Register API call
+      await AuthService().register(email, password);
+      _showSnackBar('Registration Successful');
     } else {
+      // Login API call
+      final response = await AuthService().login(email, password);
+      // Store token or navigate to Home screen
+      _showSnackBar('Login Successful');
       Navigator.pushReplacementNamed(context, Home.id);
     }
+  } catch (e) {
+    _showSnackBar(e.toString());
   }
+}
 
   void _showSnackBar(String message) {
     ScaffoldMessenger.of(context).showSnackBar(
